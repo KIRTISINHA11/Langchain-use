@@ -19,7 +19,7 @@ def process_pdf(file):
         if text:
             raw_text += text
 
-    # We need to split the text that we read into smaller chunks so that during information retreival we don't hit the token size limits.
+    # We need to split the text that we read into smaller chunks so that during information retrieval we don't hit the token size limits.
     text_splitter = CharacterTextSplitter(        
         separator = "\n",
         chunk_size = 1000,
@@ -44,37 +44,37 @@ def app():
     key = st.text_input('Enter your OpenAI API key:')
     # OpenAI API Key
     os.environ['OPENAI_API_KEY'] = key
+    
+    file_option = st.radio("Select file type", ("PDF", "CSV"))
+    file = st.file_uploader(f"Upload {file_option} file")
+    
+    if file_option == "PDF" and file is not None:
+        docsearch, chain = process_pdf(file)
 
-    option = st.selectbox("Select an option", ["PDF", "CSV"])
-    file = st.file_uploader(f"Upload {option} file", type=[option.lower()])
-    if file is not None:
-        if option == "PDF":
-            docsearch, chain = process_pdf(file)
+        i = 0
+        while True:
+            i += 1
+            query = st.text_input(f'Enter your question {i}:', key=f'question_{i}')
+            if not query:
+                break
 
-            i = 0
-            while True:
-                i += 1
-                query = st.text_input(f'Enter your question {i}:', key=f'question_{i}')
-                if not query:
-                    break
+            docs = docsearch.similarity_search(query)
+            response = chain.run(input_documents=docs, question=query)
+            st.write("Answer:", response)
 
-                docs = docsearch.similarity_search(query)
-                response = chain.run(input_documents=docs, question=query)
-                st.write("Answer:", response)
+    elif file_option == "CSV" and file is not None:
+        df = pd.read_csv(file)
+        agent = create_pandas_dataframe_agent(OpenAI(temperature=0), df, verbose=True)
 
-        elif option == "CSV":
-            df = pd.read_csv(file)
-            agent = create_pandas_dataframe_agent(OpenAI(temperature=0), df, verbose=True)
+        i = 0
+        while True:
+            i += 1
+            query = st.text_input(f'Enter your question {i}:', key=f'question_{i}')
+            if not query:
+                break
 
-            i = 0
-            while True:
-                i += 1
-                query = st.text_input(f'Enter your question {i}:', key=f'question_{i}')
-                if not query:
-                    break
-
-                response = agent.run(query)
-                st.write("Answer:", response)
+            response = agent.run(query)
+            st.write("Answer:", response)
 
 if __name__ == '__main__':
     app()
