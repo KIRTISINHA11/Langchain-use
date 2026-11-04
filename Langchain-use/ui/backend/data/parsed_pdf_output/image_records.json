@@ -1,0 +1,163 @@
+[
+  {
+    "page_number": 15,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_015_image_1.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 883
+  },
+  {
+    "page_number": 15,
+    "image_index": 2,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_015_image_2.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 883
+  },
+  {
+    "page_number": 15,
+    "image_index": 3,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_015_image_3.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 883
+  },
+  {
+    "page_number": 15,
+    "image_index": 4,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_015_image_4.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 883
+  },
+  {
+    "page_number": 15,
+    "image_index": 5,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_015_image_5.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 883
+  },
+  {
+    "page_number": 15,
+    "image_index": 6,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_015_image_6.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 883
+  },
+  {
+    "page_number": 16,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_016_image_1.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 739
+  },
+  {
+    "page_number": 16,
+    "image_index": 2,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_016_image_2.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 687
+  },
+  {
+    "page_number": 16,
+    "image_index": 3,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_016_image_3.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 675
+  },
+  {
+    "page_number": 16,
+    "image_index": 4,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_016_image_4.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 691
+  },
+  {
+    "page_number": 16,
+    "image_index": 5,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_016_image_5.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 675
+  },
+  {
+    "page_number": 16,
+    "image_index": 6,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_016_image_6.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 739
+  },
+  {
+    "page_number": 23,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_023_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 4384
+  },
+  {
+    "page_number": 28,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_028_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 944
+  },
+  {
+    "page_number": 47,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_047_image_1.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 42435
+  },
+  {
+    "page_number": 47,
+    "image_index": 2,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_047_image_2.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 50670
+  },
+  {
+    "page_number": 47,
+    "image_index": 3,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_047_image_3.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 44157
+  },
+  {
+    "page_number": 47,
+    "image_index": 4,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_047_image_4.jpeg",
+    "image_ext": "jpeg",
+    "image_size_bytes": 47620
+  },
+  {
+    "page_number": 49,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_049_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 944
+  },
+  {
+    "page_number": 50,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_050_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 944
+  },
+  {
+    "page_number": 51,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_051_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 944
+  },
+  {
+    "page_number": 52,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_052_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 944
+  },
+  {
+    "page_number": 53,
+    "image_index": 1,
+    "image_path": "data\\parsed_pdf_output\\extracted_images\\page_053_image_1.png",
+    "image_ext": "png",
+    "image_size_bytes": 944
+  }
+]

@@ -48,7 +48,7 @@ class RAGGenerator:
             )
             
             self.system_prompt = """You are an intelligent assistant that answers questions based on provided documents.
-Answer based only on the context provided. If the answer is not in the context, say "I don't have information about that in the documents.\""""
+Use the context provided to answer accurately. If the answer is mostly in the context, provide it. If important details are missing, you can say so but still provide what you found."""
             
             logger.info("rag_generator_initialized", model=groq_model)
         except Exception as exc:
@@ -68,15 +68,15 @@ Answer based only on the context provided. If the answer is not in the context, 
                 f"Document {i+1}:\n{doc.page_content}"
                 for i, doc in enumerate(retrieved_docs)
             ])
-            
-            # Create prompt
+
+            # Create prompt using template variables to avoid special character issues
             prompt_template = ChatPromptTemplate.from_messages([
                 ("system", self.system_prompt),
-                ("human", f"Context:\n{context_text}\n\nQuestion: {query}")
+                ("human", "Context:\n{context}\n\nQuestion: {question}")
             ])
-            
+
             # Generate answer
-            messages = prompt_template.format_messages()
+            messages = prompt_template.format_messages(context=context_text, question=query)
             response = self.llm.invoke(messages)
             
             logger.info("answer_generated", query_length=len(query))
